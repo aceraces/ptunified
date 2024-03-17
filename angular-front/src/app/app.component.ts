@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component, inject} from '@angular/core';
+import {NavigationService} from "./core/services/navigation.service";
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-front';
+  readonly navigationService = inject(NavigationService)
+
+  constructor() {
+    this.navigationService.initializeDarkmode();
+  }
 }

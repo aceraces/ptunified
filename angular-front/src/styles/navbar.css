@@ -1,0 +1,19 @@
+.header-background {
+  @apply bg-primary
+}
+
+.header-hover {
+  @apply hover:bg-primaryList-400 focus:ring-primaryList-400
+}
+
+.header-text {
+  @apply text-darktext
+}
+
+.header-link {
+  @apply flex header-hover header-text items-center p-2 rounded-lg
+}
+
+.header-svg {
+  @apply w-6 h-6 header-text transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white
+}
